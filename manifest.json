@@ -1,0 +1,28 @@
+{
+    "name": "Web Color Changer",
+    "short_name": "Web Color Changer",
+    "version": "1.0.0.0",
+    "description": "Change the background color of any website",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Web Color Changer Popup"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
